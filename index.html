@@ -20,17 +20,17 @@
 
         <section class="summary">
             <div class="card">
-                <h2>428</h2>
+                <h2 id="totalStudents">0</h2>
                 <p>Students</p>
             </div>
 
             <div class="card">
-                <h2>18</h2>
+                <h2 id="totalCourses">0</h2>
                 <p>Courses</p>
             </div>
 
             <div class="card">
-                <h2>76%</h2>
+                <h2 id="completionRate">0%</h2>
                 <p>Completion rate</p>
             </div>
         </section>
@@ -38,8 +38,22 @@
         <section class="courses">
 
             <h2>Course progress</h2>
-            <button id="filterButton">Mostrar cursos ≥ 80%</button>
+            <label for="progressInput">Progreso mínimo:</label>
+            <input 
+                type="number" 
+                id="progressInput" 
+                value="80" 
+                min="0" 
+                max="100"
+            >
+            <button id="filterButton">Aplicar filtro</button>
+            <button id="sortButton">Ordenar por progreso</button>
             <button id="resetButton">Restablecer</button>
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Buscar curso..."
+            >
             <div id="courseList"></div>
         
         </section>
