@@ -147,7 +147,7 @@ filterButton.addEventListener("click", function() {
 
 });
 
-resetButton.addEventListener("click", function() {
+$("#resetButton").on("click", function() {
 
     searchInput.value = "";
     searchText = "";
@@ -157,5 +157,6 @@ resetButton.addEventListener("click", function() {
     showingFiltered = false;
 
     displayCourses(courses);
+    $("#courseList").hide().fadeIn(400);
 
 });
